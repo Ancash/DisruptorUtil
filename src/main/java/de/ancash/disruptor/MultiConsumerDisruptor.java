@@ -37,6 +37,10 @@ public class MultiConsumerDisruptor<T> {
 		disruptor.start();
 	}
 
+	public void stop() {
+		disruptor.halt();
+	}
+	
 	public void publishEvent(EventTranslator<T> et) {
 		disruptor.publishEvent(et);
 	}

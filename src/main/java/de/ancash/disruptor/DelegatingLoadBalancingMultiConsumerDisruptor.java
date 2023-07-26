@@ -92,6 +92,10 @@ public class DelegatingLoadBalancingMultiConsumerDisruptor<T> {
 		disruptor.start();
 	}
 
+	public void stop() {
+		disruptor.halt();
+	}
+	
 	private int nextId() {
 		return nextId0(0);
 	}

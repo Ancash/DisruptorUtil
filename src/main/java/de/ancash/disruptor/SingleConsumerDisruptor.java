@@ -66,6 +66,10 @@ public class SingleConsumerDisruptor<T> {
 		disruptor.handleEventsWith(handler);
 		disruptor.start();
 	}
+	
+	public void stop() {
+		disruptor.halt();
+	}
 
 	public boolean hasCapacity(int i) {
 		return disruptor.getRingBuffer().hasAvailableCapacity(i);
